@@ -10,7 +10,7 @@ En estimator er forventningsrett hvis den gir den forventede verdien til en vari
 
 $$E(\hat\theta)=\theta$$
 
-### V22.4
+### V22.4a
 
 Det selges _3-kilos poser_. Siden det er et helt antall epler i posen vil vekten variere. En tilfeldig pose veier $X$ kg, hvor $X$ er normalfordelt med $\mu$ som ukjent og $\sigma^2=0.4^2$.
 
@@ -45,3 +45,25 @@ Ved uendelig mange forsøk vil gjennomsnittet av de tilhørende estimatene være
 Ja, i dette tilfellet er $\hat\mu$ forventningsrett siden den sanne forventningen for en normalfordeling er $\mu$.
 
 ## Hypotesetesting
+
+### V22.4b
+
+Er forventet vekt av posene, $\mu$, mindre enn 3 kg?
+
+$H_0:\mu=3\hspace{2em} H_a:\mu<3\hspace{2em}\alpha=0.05$
+
+Estimatoren $\hat\mu$ er testobservator.
+
+**_Hvilke verdier av estimatoren gjør at vi forkaster nullhypotesen?_**
+
+$$H_0:\mu=\mu_0\hspace{2em}H_1:\mu<\mu_0\hspace{2em}Z=\frac{\bar{X}-\mu_0}{\sigma / \sqrt{n}}$$
+
+Dette betyr at vi har forkastningsområdet $Z$ og vi forkaster nullhypotesen når $Z\leq-z_{\alpha}$
+
+La $k$ være den kritiske verdien:
+
+$$\frac{k-3}{\sigma / \sqrt{n}}=-z_{\sigma}\Rightarrow k=3-z_{\alpha}\sqrt{\frac{\sigma^2}{n}}$$
+$$...$$
+$$k=2.62$$
+
+Forkast $H_0$ hvis $\hat\mu<2.62$
