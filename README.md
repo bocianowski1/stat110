@@ -1,9 +1,5 @@
 # STAT110
 
-## Fordelinger
-
-## Sannsynlighet
-
 ## Estimatorer
 
 En estimator er forventningsrett hvis den gir den forventede verdien til en variabel, dvs:
@@ -67,3 +63,36 @@ $$...$$
 $$k=2.62$$
 
 Forkast $H_0$ hvis $\hat\mu<2.62$
+
+## Konfidensintervall
+
+**Z-intervall** for $\mu$ dersom $\sigma$ er kjent:
+
+$$\Bigl[ \bar{X}-z_{\alpha/2}\cdot \frac{\sigma}{\sqrt{n}} \space , \space \bar{X}+z_{\alpha/2}\cdot \frac{\sigma}{\sqrt{n}}\Bigl]$$
+
+**T-intervall** for $\mu$ dersom $\sigma$ **ikke** er kjent:
+
+$$\Bigl[ \bar{X}-t_{\alpha/2}\cdot \frac{S}{\sqrt{n}} \space , \space \bar{X}+t_{\alpha/2}\cdot \frac{S}{\sqrt{n}}\Bigl]$$
+
+### V22.3a
+
+Det blir gjort 5 målinger for luftforurensning: $X_1,...,X_5$ som er uavhengige og identisk normalfordelt med $\mu$ og varians $\sigma^2$. Begge er **ukjente**. De 5 målingene er: $M=252, 311, 268, 287, 302$, og $\sum_{i=1}^n(x_i-\bar{x})^2=2342$.
+
+**_Finn 95% konfidensintervall_**
+
+$\sigma$ er ukjent så dette er et T-intervall.
+
+$$\bar{x}=\frac{1}{5}\sum M=284$$
+
+$$s=\sqrt{\frac{1}{5-1}\sum(x_i-\bar{x})^2}=\sqrt{2342/4}=24.2$$
+
+$$t_{\alpha/2,n-1}=t_{0.025,4}=2.776$$
+
+Sett inn i formelen over som gir $[254, 314]$
+
+```python
+x, s, t, n = 284, 24.2, 2.776, 5
+
+x - ((s * t) / np.sqrt(n)), x + ((s * t) / np.sqrt(n))
+# (253.9565, 314.0434)
+```
