@@ -1,5 +1,25 @@
 # STAT110
 
+## Diskrete Fordelinger
+
+### Binomisk
+
+Brukes når det er to mulige utfall (kron/mynt) og det er et gitt antall uavhengige forsøk.
+
+### Geometrisk
+
+Brukes når man er interessert i tiden det tar før første suksess inntreffer i en serie uavhengige Bernoulli (binomisk) forsøk.
+
+### Hypergeometrisk
+
+Brukes når man trekker uten tilbakelegging fra en begrenset populasjon der man er interessert i antall suksesser i utvalget.
+
+### Poisson
+
+Brukes når vi er interessert i å finne sannsynligheten for at en hendelse skjer innenfor $X$ tidsperioder.
+
+## Kontinuerlige Fordelinger
+
 ## Estimatorer
 
 En estimator er forventningsrett hvis den gir den forventede verdien til en variabel, dvs:
