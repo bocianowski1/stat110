@@ -14,6 +14,14 @@ Brukes når man er interessert i tiden det tar før første suksess inntreffer i
 
 Brukes når man trekker uten tilbakelegging fra en begrenset populasjon der man er interessert i antall suksesser i utvalget.
 
+**Intuisjon for at en hypergeometrisk fordeling er tilnærmet lik en binomisk fordeling**
+
+Når den totale populasjonen $n$ er mye større enn utvalget man trekker, $m$, er det ikke viktig om man trekker med eller uten tilbakelegging.
+
+$$X\sim\text{Bin}(m, \frac{r}{n})$$
+
+Det betyr at utvalget vi trekker er populasjonen i den binomiske fordelingen og sannsynligheten $p=\frac{r}{n}$ altså antallet ønskede ($r$) over totale mulige.
+
 ### Poisson
 
 Brukes når vi er interessert i å finne sannsynligheten for at en hendelse skjer innenfor $X$ tidsperioder.
